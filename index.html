@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Form</title>
+
+</head>
+   <link rel="stylesheet" href="./app.js">
+<body>
+
+    <h1>Customer Feedback Form</h1><hr>
+    <img src="./assert/download.jpeg" alt="">
+    <p><h1>Airpods</h1></p><hr>
+    <form action="https://example.com/submit-feedback" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="rating for performance">Rating for performance:</label>
+        <select id="rating for performance" name="rating for performance" required>
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Very Good</option>
+            <option value="3">3 - Good</option>
+            <option value="2">2 - Fair</option>
+            <option value="1">1 - Poor</option>
+        </select><br>
+        <label for="rating for performance">Rating features:</label>
+        <select id="rating for performance" name="rating for performance" required>
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Very Good</option>
+            <option value="3">3 - Good</option>
+            <option value="2">2 - Fair</option>
+            <option value="1">1 - Poor</option>
+        </select><br>
+
+        <label for="rating for performance">overall satisfiction:</label>
+        <select id="rating for performance" name="rating for performance" required>
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Very Good</option>
+            <option value="3">3 - Good</option>
+            <option value="2">2 - Fair</option>
+            <option value="1">1 - Poor</option>
+        </select><br>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea><br>
+
+
+    </form>
+    <div id="responseMessage"></div>
+
+    <div id="my_form">
+     
+        <button id="nextStep">Submit</button>
+      </div>
+      
+      <div id="thank_you" style="display: none;">
+        <p>Thanks for filling up the form!</p>
+        <button type="submit">Close</button>
+      </div>
+      
+      <script>
+        var nextStep = document.querySelector('#nextStep');
+      
+        nextStep.addEventListener('click', function (e) {
+          e.preventDefault();
+          // Hide first view
+          document.getElementById('my_form').style.display = 'none';
+      
+          // Show thank you message element
+          document.getElementById('thank_you').style.display = 'block';
+        });
+      </script>
+</html>
